@@ -37,17 +37,25 @@ function snapCracklePrime(maxValue)
             {
                 resposta.push( " SnapCracklePrime")
             }else
-            resposta.push( " SnapCrackle")
+            {
+                resposta.push( " SnapCrackle")  
+            }
         }else if(counter % 2 !== 0)
         {
             if (counter === 3 )
             {
                resposta.push(" SnapPrime")
-            }else if(counter % 3 !== 0 && counter > 1)
+            }else if( counter % 7 === 0)
+            {
+                resposta.push(" Snap") 
+            }
+            else if(counter % 3 !== 0 && counter > 1)
             {
                 resposta.push(" SnapPrime")
             }else
-            resposta.push(" Snap")
+            {
+                resposta.push(" Snap")
+            }
         }else if(counter % 5 === 0)
         {
             resposta.push(" Crackle")
@@ -57,7 +65,9 @@ function snapCracklePrime(maxValue)
             {
                 resposta.push(" Prime")
             }else
-            resposta.push(' '+counter)
+            {
+                resposta.push(' '+counter)
+            }
         }
     }
     return resposta 
